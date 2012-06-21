@@ -7,3 +7,18 @@ toolchain
 *.a
 *.html
 *.text
+*.lo
+*.la
+*.Plo
+*.Po
+*.stamp
+*.libs/
+
+#executables and docs getting built that won't clean up with "make clean"
+#there are probably some config options somewhere to turn these off
+Project/jni/libtheora/examples/dump_psnr
+Project/jni/libtheora/examples/dump_video
+Project/jni/libtheora/examples/encoder_example
+Project/jni/libvorbis/lib/test_sharedbook
+Project/jni/libtheora/doc/spec/vp3huff
+
