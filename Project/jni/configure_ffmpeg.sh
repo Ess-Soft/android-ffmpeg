@@ -35,6 +35,7 @@ pushd ffmpeg
 --ld=arm-linux-androideabi-ld \
 --extra-cflags="-fPIC -DANDROID -D__thumb__ -mthumb -Wfatal-errors -Wno-deprecated" \
 $featureflags \
+--enable-libtheora \
 --disable-ffmpeg \
 --disable-ffplay \
 --disable-ffprobe \
@@ -46,7 +47,7 @@ $featureflags \
 --disable-demuxer=v4l2 \
 --disable-indev=v4l \
 --disable-indev=v4l2 \
---extra-cflags="-I../x264 -Ivideokit" \
---extra-ldflags="-L../x264" 
+--extra-cflags="-I../x264 -I../libtheora/output/include -I../libogg/output/include -I../libvorbis/output/include -Ivideokit" \
+--extra-ldflags="-lc -L../x264 -L../libogg/output/lib -L../libvorbis/output/lib -L../libtheora/output/lib" 
 
 popd; popd

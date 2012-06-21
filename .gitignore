@@ -1,3 +1,9 @@
 obj
 toolchain
 .*.swp
+*.log
+*.o
+*.so
+*.a
+*.html
+*.text
