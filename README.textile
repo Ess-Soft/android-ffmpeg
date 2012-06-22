@@ -1,3 +1,14 @@
+h1. Additions for libtheora Support
+
+I added libogg, libvorbis, and libtheora support to halfninja's original work. This will allow you to encode video in the free Theora (ogv container) format. The rest of the documentation after this section is halfninja's original documentation. Everything can still be built as described below.
+I don't intent to work on this any more as the library does everything I need it to in it's current state. That said, the following notes might be helpful to someone who does:
+
+# If you run into problems compiling ffmpeg itself, check the file Project/jni/ffmpeg/libavutil/libm.h. Replace the bottom six methods in the file with equivalent "define" statements. I didn't commit my changes to the file because it's in the ffmpeg submodule, and I didn't want to fork that too.
+# halfninja suggests that you might be able to update the ffmpeg submodule to a newer version. This will most likely cause problems with "ffmpeg.c" and "cmdutils.c" in the Project/jni/videokit folder, since they are essentially copies of the ffmpeg source and won't be updated when you pull the latest version. You'll want/need to re-copy these files and make some modifications to them if you need to update to a newer version of ffmpeg.
+# The libogg, libvorbis, and libtheora folders should probably be split up into submodules themselves, to be consistent with the original design which has ffmpeg and x264 as submodules
+
+- jhotovy
+
 h1. Read me first (that's why I'm at the top!)
 
 I'm not going to be working on this at all for the forseeable future, and I won't have time to answer questions about why it doesn't compile on your platform or has something missing.
