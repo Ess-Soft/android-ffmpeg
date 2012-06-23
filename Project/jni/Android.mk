@@ -28,7 +28,7 @@ THEORA_LIBS := $(addprefix libtheora/output/lib/, \
 
 LOCAL_CFLAGS += -g -Iffmpeg -Ivideokit -Wno-deprecated-declarations 
 LOCAL_LDLIBS += -llog -lz $(FFMPEG_LIBS) $(THEORA_LIBS) $(OGG_LIBS) x264/libx264.a
-LOCAL_SRC_FILES := ffmpeg_android/ffmpeg_android.c ffmpeg_android/ffmpeg.c ffmpeg_android/cmdutils.c
+LOCAL_SRC_FILES := ffmpeg_android/ffmpeg_android.c ffmpeg/ffmpeg.c ffmpeg/cmdutils.c
 
 include $(BUILD_SHARED_LIBRARY)
 

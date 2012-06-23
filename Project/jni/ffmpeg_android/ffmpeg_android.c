@@ -1,9 +1,5 @@
 #include "ffmpeg_android.h"
-
 #include <stdlib.h>
-#include <stdbool.h>
-
-int main(int argc, char **argv);
 
 // Use to safely invoke ffmpeg multiple times from the same Activity
 JNIEXPORT void JNICALL Java_com_atonality_ffmpeg_FFmpeg_run(JNIEnv *env, jobject obj, jobjectArray args)
