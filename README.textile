@@ -7,6 +7,10 @@ I don't intent to work on this any more as the library does everything I need it
 # halfninja suggests that you might be able to update the ffmpeg submodule to a newer version. This will most likely cause problems with "ffmpeg.c" and "cmdutils.c" in the Project/jni/videokit folder, since they are essentially copies of the ffmpeg source and won't be updated when you pull the latest version. You'll want/need to re-copy these files and make some modifications to them if you need to update to a newer version of ffmpeg.
 # The libogg, libvorbis, and libtheora folders should probably be split up into submodules themselves, to be consistent with the original design which has ffmpeg and x264 as submodules
 
+h4. libffmpeginvoke
+
+I was getting segfaults when running ffmpeg's main() twice in a row in Android. I'm far from an expert in this area, but libffmpeginvoke at least applies the band-aid solution described here: http://stackoverflow.com/questions/10649119/calling-native-method-twice-of-third-party-library-in-an-activity-causes-the-and. Use libffmpeginvoke instead of libffmpeg if you need to call main() more than once in your application.
+
 - jhotovy
 
 h1. Read me first (that's why I'm at the top!)
